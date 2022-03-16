@@ -11,16 +11,16 @@ Concevoir un jeu de monopoly en accord avec les notions de qualité logicielle �
 
 ## Besoins fonctionnels
 
-# Donnees du jeu
+### Donnees du jeu
 
 
-# Déroulement du jeu
+### Déroulement du jeu
 
 
-# Notion de joueurs
+### Notion de joueurs
 Un joueur possède un pion sur le plateau et va déplacer son pion tours à tours en faisant face aux différents évenements du jeu
 
-# Modes de jeu
+### Modes de jeu
 - Simulation
 - Joueur contre joueurs
 - Joueur contre IA
