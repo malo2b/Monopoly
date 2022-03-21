@@ -28,8 +28,13 @@ public class Controleur {
         for (int i = 0; i < 20; i++) {
             for (int j = 0; j < nbJoueurs; j++) {
                 joueurs.get(j).lancerDe();
+                plateau.interact(joueurs.get(j), joueurs.get(j).getCurrentCase());
             }
         }
-    }
 
+        // Affichage resultats
+        for (int j = 0; j < nbJoueurs; j++) {
+            System.out.println(joueurs.get(j).toString());
+        }
+    }
 }

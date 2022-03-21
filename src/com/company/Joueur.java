@@ -23,4 +23,11 @@ public class Joueur {
     public int getCurrentCase() {
         return cumulDes % 40;
     }
+
+    @Override
+    public String toString() {
+        return "Joueur{" +
+                "case=" + getCurrentCase() +
+                '}';
+    }
 }
