@@ -4,10 +4,8 @@ import java.util.ArrayList;
 
 public abstract class Case {
 
-    protected ArrayList<Joueur> joueurs;
-    protected abstract void onJoueurSurCase();
+    protected abstract void onJoueurSurCase(Joueur j);
 
     public Case() {
-        this.joueurs = new ArrayList<Joueur>();
     }
 }
