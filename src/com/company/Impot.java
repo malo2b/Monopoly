@@ -1,19 +1,19 @@
 package com.company;
 
-public class Chance extends Evenement {
-
+public class Impot extends  Case{
     private int montant;
 
-    public Chance(int m){
+    public Impot(int m){
         this.montant = m;
     }
+
     @Override
     protected void onJoueurSurCase(Joueur j) {
-        j.setBalance(j.getBalance()+montant);
+        j.setBalance(j.getBalance()-montant);
         System.out.println(toString(j));
     }
 
     public String toString(Joueur j){
-        return "Jour de chance ! Le joueur "+j.getIdJoueur()+" touche une somme de "+montant;
+        return "Aie le fisc vous rattrape ! Vous devez payer "+montant;
     }
 }

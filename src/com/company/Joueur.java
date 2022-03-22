@@ -7,27 +7,47 @@ public class Joueur {
     private String nom;
     private int balance;
     private int cumulDes;
+    private static int nbJoueurs = 0;
+    private int idJoueur;
+
     Random random = new Random();
 
     public Joueur(String nom) {
+        nbJoueurs++;
         this.nom = nom;
+        this.idJoueur = nbJoueurs;
     }
 
     public void lancerDe() {
         int de1 = random.nextInt(6) + 1;
         int de2 = random.nextInt(6) + 1;
-
         cumulDes = cumulDes + de1 + de2;
+    }
+
+    public int getIdJoueur() {
+        return idJoueur;
+    }
+
+    public int getBalance() {
+        return balance;
+    }
+
+    public void setBalance(int balance) {
+        this.balance = balance;
+    }
+
+    public int getCumulDes() {
+        return cumulDes;
     }
 
     public int getCurrentCase() {
         return cumulDes % 40;
     }
 
+
     @Override
     public String toString() {
-        return "Joueur{" +
-                "case=" + getCurrentCase() +
-                '}';
+        return "Joueur "+idJoueur+" case actuelle :"+getCurrentCase()+" , balance :"+balance;
     }
+
 }

@@ -7,5 +7,7 @@ public abstract class Case {
     protected abstract void onJoueurSurCase(Joueur j);
 
     public Case() {
+
     }
+
 }
