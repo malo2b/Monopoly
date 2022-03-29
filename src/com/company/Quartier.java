@@ -22,7 +22,6 @@ public class Quartier extends Proprietee {
 
     @Override
     protected void onJoueurSurCase(Joueur j) throws IOException {
-        boolean achete = false;
         if (isAchetee && j != proprietaire) {
             j.payPenalite(proprietaire, getPenalite());
         } else if (j == proprietaire) {
@@ -33,11 +32,7 @@ public class Quartier extends Proprietee {
 
             String response = br.readLine();
 
-            if (response.equals("O")){
-                achete = true;
-            }
-
-            if (achete) {
+            if (response.equals("O")) {
                 if (j.getBalance() >= prix) {
                     j.enleveArgent(prix);
                     proprietaire = j;
