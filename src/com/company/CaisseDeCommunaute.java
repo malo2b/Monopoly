@@ -6,4 +6,9 @@ public class CaisseDeCommunaute extends Proprietee {
     protected void onJoueurSurCase(Joueur j) {
 
     }
+
+    @Override
+    public String toString() {
+        return "Caisse De Communaute";
+    }
 }

@@ -1,6 +1,6 @@
 package com.company;
 
-public class Impot extends  Case{
+public class Impot extends Evenement {
     private int montant;
 
     public Impot(int m){
@@ -10,10 +10,10 @@ public class Impot extends  Case{
     @Override
     protected void onJoueurSurCase(Joueur j) {
         j.enleveArgent(montant);
-        System.out.println(toString(j));
+        System.out.println("Aie le fisc vous rattrape vous payez " + montant + "$");
     }
 
     public String toString(Joueur j){
-        return "Aie le fisc vous rattrape ! Vous devez payer "+montant;
+        return "Impots";
     }
 }

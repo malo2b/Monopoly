@@ -6,4 +6,9 @@ public class Parc extends Evenement {
     protected void onJoueurSurCase(Joueur j) {
 
     }
+
+    @Override
+    public String toString() {
+        return "Parc Gratuit";
+    }
 }

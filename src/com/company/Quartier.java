@@ -6,9 +6,9 @@ import java.io.InputStreamReader;
 
 public class Quartier extends Proprietee {
 
-    private boolean isAchetee;
+    private boolean estAchetee;
     private Joueur proprietaire;
-    private int prix;
+    private final int prix;
     private String nom;
 
     public Quartier(int prix, String nom) {
@@ -22,7 +22,7 @@ public class Quartier extends Proprietee {
 
     @Override
     protected void onJoueurSurCase(Joueur j) throws IOException {
-        if (isAchetee && j != proprietaire) {
+        if (estAchetee && j != proprietaire) {
             j.payPenalite(proprietaire, getPenalite());
         } else if (j == proprietaire) {
             System.out.println("Bienvenue à la maison !");
@@ -42,5 +42,10 @@ public class Quartier extends Proprietee {
 
             }
         }
+    }
+
+    @Override
+    public String toString() {
+        return "Quartier : " + this.nom ;
     }
 }

@@ -53,7 +53,7 @@ public class Joueur {
 
     @Override
     public String toString() {
-        return "Joueur "+idJoueur+" case actuelle :"+getCurrentCase()+" , balance :"+balance;
+        return "Joueur "+idJoueur+" case actuelle :"+getCurrentCase() +" , balance :"+balance;
     }
 
     public void payPenalite(Joueur proprietaire, int penalite) {

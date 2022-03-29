@@ -7,13 +7,14 @@ public class Chance extends Evenement {
     public Chance(int m){
         this.montant = m;
     }
+
     @Override
     protected void onJoueurSurCase(Joueur j) {
         j.ajoutArgent(montant);
-        System.out.println(toString(j));
+        System.out.println("Jour de chance vous gagnez 200$");
     }
 
-    public String toString(Joueur j){
-        return "Jour de chance ! Le joueur "+j.getIdJoueur()+" touche une somme de "+montant;
+    public String toString(){
+        return "Case Chance";
     }
 }

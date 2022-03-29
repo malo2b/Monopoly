@@ -14,6 +14,6 @@ public class Depart extends Case {
     }
 
     public String toString(Joueur j) {
-        return "Le joueur "+j.getIdJoueur()+" touche une somme de "+montant;
+        return "Case Départ";
     }
 }
