@@ -1,5 +1,9 @@
 package com.company;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
 public class Quartier extends Proprietee {
 
     private boolean isAchetee;
@@ -17,16 +21,21 @@ public class Quartier extends Proprietee {
     }
 
     @Override
-    protected void onJoueurSurCase(Joueur j) {
+    protected void onJoueurSurCase(Joueur j) throws IOException {
         boolean achete = false;
         if (isAchetee && j != proprietaire) {
             j.payPenalite(proprietaire, getPenalite());
         } else if (j == proprietaire) {
             System.out.println("Bienvenue à la maison !");
         } else {
-            System.out.println("La case est libre et coute " + prix + "$ Voulez vous l'acheter ? [O/N]");
+            BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+            System.out.print("La case est libre et coute " + prix + "$ Voulez vous l'acheter ? [O/N]");
 
-            // Interaction
+            String response = br.readLine();
+
+            if (response.equals("O")){
+                achete = true;
+            }
 
             if (achete) {
                 if (j.getBalance() >= prix) {

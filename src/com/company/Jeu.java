@@ -1,5 +1,6 @@
 package com.company;
 
+import java.io.IOException;
 import java.util.ArrayList;
 
 public abstract class Jeu {
@@ -25,7 +26,12 @@ public abstract class Jeu {
         }
     }
 
-    public abstract void lancerJeu();
+    public void setMoneyJoueur(){
+        for (int i = 0; i < joueurs.size(); i++) {
+            joueurs.get(i).setBalance(500);
+        }
+    }
+    public abstract void lancerJeu() throws IOException;
 
     protected boolean isJoueurEnFaillite() {
         for (int i = 0; i < nbJoueurs; i++) {

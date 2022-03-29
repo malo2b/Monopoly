@@ -1,8 +1,10 @@
 package com.company;
 
+import java.io.IOException;
+
 public class Simulation extends Jeu {
     @Override
-    public void lancerJeu() {
+    public void lancerJeu() throws IOException {
         // Lancement de la simulation en 20 tours
         for (int i = 0; i < 20; i++) {
             System.out.println("Tour "+i);

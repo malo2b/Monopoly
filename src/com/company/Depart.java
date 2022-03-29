@@ -9,7 +9,7 @@ public class Depart extends Case {
 
     @Override
     protected void onJoueurSurCase(Joueur j) {
-        j.setBalance(j.getBalance()+montant);
+        j.ajoutArgent(montant);
         System.out.println(toString(j));
     }
 

@@ -1,5 +1,7 @@
 package com.company;
 
+import java.io.IOException;
+
 public class Plateau {
 
     private final int nbCases;
@@ -7,7 +9,12 @@ public class Plateau {
 
     public Plateau(int nbCases) {
         this.nbCases = nbCases;
+        this.cases = new Case[nbCases];
         remplirPlateau();
+    }
+
+    public Case[] getCases() {
+        return cases;
     }
 
     public void remplirPlateau(){
@@ -52,7 +59,7 @@ public class Plateau {
     }
 
 
-    public void interact(Joueur j) {
+    public void interact(Joueur j) throws IOException {
         cases[j.getCurrentCase()].onJoueurSurCase(j);
     }
 }
