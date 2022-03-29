@@ -11,7 +11,7 @@ public class Simulation extends Jeu {
             for (int j = 0; j < NBCASES; j++) {
                 joueurs.get(j).lancerDe();
                 System.out.println(joueurs.get(j).toString());
-                plateau.interact(joueurs.get(j));
+                plateau.interagir(joueurs.get(j));
             }
             System.out.println("\n");
         }

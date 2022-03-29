@@ -6,14 +6,9 @@ import java.io.InputStreamReader;
 
 public class Quartier extends Proprietee {
 
-    private boolean estAchetee;
-    private Joueur proprietaire;
-    private final int prix;
-    private String nom;
 
     public Quartier(int prix, String nom) {
-        this.prix = prix;
-        this.nom = nom;
+        super(prix, nom);
     }
 
     public int getPenalite() {

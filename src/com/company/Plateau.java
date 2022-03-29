@@ -61,7 +61,7 @@ public class Plateau {
     }
 
 
-    public void interact(Joueur j) throws IOException {
+    public void interagir(Joueur j) throws IOException {
         int currentCase = j.getCurrentCase();
         System.out.println(cases[currentCase].toString());
         cases[currentCase].onJoueurSurCase(j);

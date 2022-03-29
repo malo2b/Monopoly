@@ -19,7 +19,7 @@ public class Interaction extends Jeu {
                     System.out.println("Passage par la case départ : +200$");
                     j.ajoutArgent(200);
                 }
-                plateau.interact(j);
+                plateau.interagir(j);
             }
             nbTours++;
         } while (!isJoueurEnFaillite());
