@@ -9,7 +9,7 @@ public class Impot extends  Case{
 
     @Override
     protected void onJoueurSurCase(Joueur j) {
-        j.setBalance(j.getBalance()-montant);
+        j.enleveArgent(montant);
         System.out.println(toString(j));
     }
 

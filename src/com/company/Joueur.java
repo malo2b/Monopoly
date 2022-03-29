@@ -9,6 +9,11 @@ public class Joueur {
     private int cumulDes;
     private static int nbJoueurs = 0;
     private int idJoueur;
+    private boolean enFaillite;
+
+    public boolean isEnFaillite() {
+        return enFaillite;
+    }
 
     Random random = new Random();
 
@@ -16,6 +21,7 @@ public class Joueur {
         nbJoueurs++;
         this.nom = nom;
         this.idJoueur = nbJoueurs;
+        this.enFaillite = false;
     }
 
     public void lancerDe() {
@@ -50,4 +56,19 @@ public class Joueur {
         return "Joueur "+idJoueur+" case actuelle :"+getCurrentCase()+" , balance :"+balance;
     }
 
+    public void payPenalite(Joueur proprietaire, int penalite) {
+        enleveArgent(penalite);
+        proprietaire.ajoutArgent(penalite);
+    }
+
+    public void ajoutArgent(int montant) {
+        balance += montant;
+    }
+
+    public void enleveArgent(int montant) {
+        balance -= montant;
+        if (balance < 0) {
+            enFaillite = true;
+        }
+    }
 }

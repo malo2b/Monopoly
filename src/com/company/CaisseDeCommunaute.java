@@ -1,6 +1,6 @@
 package com.company;
 
-public class CaisseDeCommunaute extends Achetable {
+public class CaisseDeCommunaute extends Proprietee {
 
     @Override
     protected void onJoueurSurCase(Joueur j) {
