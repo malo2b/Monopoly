@@ -2,10 +2,8 @@ package com.company;
 
 public class Gare extends Proprietee {
 
-    private String nom;
-
     public Gare(String nom) {
-        this.nom = nom;
+        super(200, nom);
     }
 
     @Override
