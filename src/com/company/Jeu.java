@@ -26,8 +26,8 @@ public abstract class Jeu {
         }
     }
 
-    public void setMoneyJoueur(){
-        for (int i = 0; i < joueurs.size(); i++) {
+    public void initBalanceJoueurs(){
+        for (int i = 0; i < nbJoueurs; i++) {
             joueurs.get(i).setBalance(500);
         }
     }
