@@ -1,9 +1,9 @@
 package com.company;
 
-public class Impot extends  Case{
+public class Impots extends Evenement {
     private int montant;
 
-    public Impot(int m){
+    public Impots(int m){
         this.montant = m;
     }
 

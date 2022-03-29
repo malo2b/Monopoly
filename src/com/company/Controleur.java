@@ -15,9 +15,7 @@ public class Controleur {
         this.plateauCase = new Case[nbCase];
         joueurs = new ArrayList<Joueur>();
         this.setNbJoueurs(3);
-        remplirJoueur(joueurs);
-        remplirPlateau(plateauCase);
-        this.plateau = new Plateau(plateauCase);
+        this.plateau = new Plateau();
     }
 
     public void setNbJoueurs(int nbJoueurs) {
@@ -30,23 +28,23 @@ public class Controleur {
             joueurs.add(new Joueur(String.format("%d", i)));
         }
     }
-    public void remplirPlateau(Case[] p){
-        p[0] = new Depart(500);
-        joueurs.forEach(joueur -> p[0].onJoueurSurCase(joueur));
-
-        for (int i=1; i <nbCase; i++){
-            p[i] = new Visite();
-        }
-
-        p[12] = new Chance(200);
-        p[18] = new Chance(200);
-        p[31] = new Chance(200);
-        p[5] = new Chance(200);
-
-        p[15] = new Impot(100);
-        p[23] = new Impot(100);
-        p[35] = new Impot(100);
-    }
+//    public void remplirPlateau(Case[] p){
+//        p[0] = new Depart(500);
+//        joueurs.forEach(joueur -> p[0].onJoueurSurCase(joueur));
+//
+//        for (int i=1; i <nbCase; i++){
+//            p[i] = new Visite();
+//        }
+//
+//        p[12] = new Chance(200);
+//        p[18] = new Chance(200);
+//        p[31] = new Chance(200);
+//        p[5] = new Chance(200);
+//
+//        p[15] = new Impot(100);
+//        p[23] = new Impot(100);
+//        p[35] = new Impot(100);
+//    }
 
     public void lancerSimulation1 () {
 

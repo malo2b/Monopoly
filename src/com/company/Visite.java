@@ -1,6 +1,6 @@
 package com.company;
 
-public class Visite extends Case{
+public class Visite extends Evenement {
 
     @Override
     protected void onJoueurSurCase(Joueur j) {
